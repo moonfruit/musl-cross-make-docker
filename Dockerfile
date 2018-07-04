@@ -4,7 +4,7 @@ ARG TOOLCHAIN=stable
 
 # Baseline
 RUN apt-get update && \
-    apt-get install -y build-essential git cmake sudo curl file wget protobuf-compiler-grpc ca-certificates && \
+    apt-get install -y build-essential git cmake sudo curl file wget protobuf-compiler-grpc ca-certificates clang && \
     apt-get clean && rm -rf /var/lib/apt/lists/* 
 
 # Install cross compiling toolchain for musl
